@@ -1,0 +1,10 @@
+FROM harbor.hiotc.pro/saas-test/node:13.3.0-stretch
+#FROM node:13.3.0-stretch
+
+WORKDIR /data/chainup/node/exchange-vue-server-co
+
+ADD ./ /data/chainup/node/exchange-vue-server-co
+
+EXPOSE 7083
+
+ENTRYPOINT npm run start-exchange-vue-server-co

@@ -1,0 +1,384 @@
+.free-staking-detail {
+  background-position: top center;
+  background-repeat: no-repeat;
+  .fade-enter-active, .fade-leave-active {
+    transition all 0.3s ease
+  }
+
+  .fade-enter, .fade-leave-to {
+    transform translateX(10px)
+    opacity 0
+  }
+
+  .free-staking-header {
+    position relative
+
+    .popup-cont {
+      position absolute
+      left 0
+      top 80px
+      z-index 9
+    }
+
+    .project-logo {
+      float left
+      cursor: pointer
+      height 100%
+      position: relative
+      .logo-box {
+        position: relative;
+        border-radius: 100px;
+        background: var(--color-Img-bg);
+        overflow: hidden;
+        width 60px
+        height 60px
+      }
+      img {
+        width 100%
+        height 100%
+        display block
+      }
+    }
+
+    .project-name {
+      cursor pointer
+      float left
+      font-size 32px
+      padding 0 30px
+      height 180px
+      line-height 180px
+      color: rgba(237,244,248,1);
+    }
+
+    .project-info {
+      padding-left 12px
+
+      .project-title {
+        vertical-align: bottom
+        font-size 32px
+        line-height 40px
+        font-weight: 700;
+        color: var(--color-text-primary);
+
+        span {
+          display inline-block
+          font-size 16px
+          font-weight: 400;
+          line-height 20px
+          margin-top: 4px;
+        }
+      }
+
+      .project-range {
+        font-size 28px
+        color #24A0F5
+        padding-bottom 2px
+        line-height 40px
+      }
+
+      .project-range-text {
+        font-size 14px
+        line-height: 18px;
+        color: var(--color-text-secondary);
+        font-weight: 500;
+      }
+    }
+
+    .nav-active {
+      padding-block: 28px;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid var(--color-Divider);
+      .common-button {
+        border-radius: 100px;
+        border: 1px solid var(--color-BTN-secondary-border);
+        background: none;
+      }
+
+      .nav-active-text {
+        font-size 16px
+        line-height: 20px;
+        font-weight: 600;
+        color: var(--color-BTN-text-secondary-revert);
+      }
+    }
+  }
+
+  .project-content {
+    flex: 1;
+    &.mart-20 {
+      margin-top 20px
+    }
+
+    padding: 40px;
+
+    .project-content-title {
+      border-bottom 1px solid
+
+      .titlel {
+        padding-left 20px
+        font-size 16px
+        line-height 62px
+        float left
+      }
+
+      .titler {
+        padding-right 20px
+        float right
+        line-height 62px
+        cursor pointer
+
+        span {
+          font-size 14px
+          padding-left 6px
+        }
+      }
+    }
+  }
+
+  .process-line-cont {
+    overflow hidden
+
+    .process-line {
+      float left
+      margin-right 32px
+
+      &:last-child {
+        margin-right 0
+      }
+
+      .process-linel {
+        float left
+        min-width 73px
+        width: 75px
+
+        .process-line-circle {
+          width 50px
+          height 50px
+          border-radius 50%
+          text-align center
+          line-height 50px
+          font-size 22px
+        }
+
+        .process-line-text {
+          padding 14px 0px 5px 0px
+          font-size 14px
+        }
+
+        .process-line-date {
+          font-size 14px
+          white-space nowrap
+        }
+      }
+
+      .process-liner {
+        float left
+        width 94px
+        height 1px
+        margin-top 25px
+
+        .process-liner-fill {
+          width 100%
+          height 1px
+        }
+      }
+    }
+  }
+
+  .process-rate {
+    margin-top 50px
+
+    .process-title {
+      font-size 14px
+      line-height 14px
+      padding-bottom 10px
+
+      .titlel {
+        float left
+      }
+
+      .titler {
+        float right
+      }
+    }
+
+    .process-rate-line {
+      width 880px
+      height 12px
+      overflow: hidden;
+      .process-rate-line-fill {
+        width 50%
+        height 12px
+      }
+    }
+
+    .process-value {
+      margin-top 10px
+      font-size 14px
+      line-height 14px
+
+      .valuel {
+        float left
+      }
+
+      .valuer {
+        float right
+      }
+    }
+  }
+
+  .project-warning {
+    font-size 14px
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    line-height 26px
+    margin-block: 28px;
+  }
+
+  .user-buy {
+    .user-buy-title {
+      font-size 12px
+    }
+
+    .user-lock-account {
+      margin-top 5px
+      font-size 22px
+      line-height 30px
+
+      .num {
+        padding-right 10px
+      }
+
+    }
+    .title-wrap {
+      color: var(--color-text-primary);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: normal;
+
+      span:first-child {
+        color: var(--color-text-secondary);
+      }
+
+      .user-account-num {
+        margin-left: auto;
+      }
+    }
+
+    .user-lock-input {
+      margin-top 50px
+
+      .user-lock-title {
+        font-size 12px
+      }
+      .user-input{
+        width: 100%
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        background: var(--color-Input-fill);
+        border: 1px solid var(--color-Input-border);
+        box-sizing: border-box;
+      }
+    }
+
+    .user-account-coin, .user-account-all {
+      cursor pointer
+      font-size 12px
+      font-size: 500;
+      margin-left: 12px;
+    }
+     .user-account-coin {
+      color: var(--color-text-primary);
+     }
+     .user-account-all {
+      padding-right: 16px;
+      color: var(--color-BTN-primary);
+    }
+
+    .user-income {
+      margin-block: 28px;
+      border-radius 8px
+      padding: 20px 16px;
+      background: var(--color-BG);
+      .user-name {
+        color: var(--color-text-secondary);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; 
+      }
+
+      span {
+        font-size 24px
+        line-height: 32px;
+        font-weight: 700;
+        color: var(--color-text-primary);
+        vertical-align middle
+      }
+    }
+  }
+
+  .user-buyed-income {
+    display: flex;
+    padding: 24px 0;
+    border-radius: 12px;
+    border: 1px solid var(--color-Divider);
+    .user-income-item {
+      float left
+      width: 33%;
+      padding-right 20px
+      padding-left 20px
+      border-right: 1px solid var(--color-Divider);
+
+      &.noborder {
+        border none
+      }
+
+      .user-income-title {
+        font-size 14px
+        line-height 18px
+        font-weight: 500;
+        padding-bottom 4px
+        color: var(--color-text-secondary);
+      }
+      .num {
+        font-size 24px
+        line-height 32px
+        font-weight: 700;
+        color: var(--color-text-primary);
+      }
+      .coin {
+        font-size 14px
+        font-weight: 600;
+        color: var(--color-text-primary);
+      }
+    }
+  }
+
+  .user-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .check-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .common-checkout {
+      height: 14px;
+    }
+    .text {
+      padding-left 5px
+      color: var(--color-text-secondary);
+      font-family: Outfit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+}

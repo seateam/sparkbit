@@ -1,0 +1,260 @@
+.page-otcTrade {
+  .warning {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .input-line-content{
+    .input-line-errorStence{
+      height auto
+      position static
+      padding-top 10px
+      .input-line-warning{
+        position static
+        bottom auto
+        line-height 16px
+      }
+      .input-line-error{
+        position static
+        top auto
+        line-height 16px
+      }
+    }
+  }
+  width: 1180px;
+  min-height: 800px;
+  // padding-bottom: 80px;
+  margin: 30px auto 0 auto;
+  .page-otcTrade-content {
+   padding: 28px;
+  }
+  .otcTrade-otcPayIcon {
+    cursor: auto;
+    margin-top: -3px;
+    margin-right: 20px;
+  }
+  .otcTrade-header {
+    height: 91px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    box-sizing: border-box;
+    // 头像
+    .otcTrade-page {
+      display: inline-block;
+      width: 50px
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 22px;
+      position: relative;
+      // float: left;
+      vertical-align: middle;
+      cursor: pointer;
+      div{
+        width: 50px
+        height: 50px;
+        border-radius: 50%;
+        overflow hidden
+      }
+      img {
+        width: 50px
+        height: 50px;
+        display: block
+      }
+    }
+    // 名称/在线状态
+    .otcTrade-user {
+      display: inline-block;
+      // float: left;
+      margin-left: 20px;
+      vertical-align: middle;
+      margin-right: 90px;
+      .otcTrade-userName {
+        font-size: 20px;
+        height: 20px;
+      }
+      .otcTrade-userStatus {
+        display: inline-flex;
+        margin-top: 6px;
+        align-items: center;
+        gap: 4px;
+        font-size: 16px;
+      .lineIcon {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .online {
+        background-color: var(--color-Green);
+      }
+      .offline {
+        background-color: var(--color-Green);
+      }
+      }
+    }
+    .otcTrade-header-even {
+      display: inline-block;
+      vertical-align: middle;
+      float:right;
+      padding: 0 16px;
+      .otcTrade-header-even-value {
+       font-size: 20px;
+        // text-align: end;
+        margin-top: 4px;
+        height: 20px;
+      }
+      .otcTrade-header-even-key {
+          font-size: 14px;
+        // text-align: end;
+      }
+    }
+    .otcTrade-header-even-credit {
+      border-left:1px solid var(--color-Toggle);
+      border-right: 1px solid var(--color-Toggle);
+    }
+  }
+  .otcTrade-message {
+    padding-top: 28px;
+    padding-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    .otcTrade-message-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .otcTrade-message-keys {
+      float: left;
+      li {
+        line-height: 20px;
+        margin-top: 20px;
+        font-size: 14px;
+        height: 20px;
+      }
+    }
+    .otcTrade-message-values {
+      float: left;
+      margin-left: 44px;
+      li {
+        line-height: 20px;
+        font-size: 14px;
+        margin-top: 20px;
+        max-width: 600px;
+        word-wrap: break-word;
+      }
+    }
+  }
+  .closeTrade-dialog {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .otcTrade-options-trade{
+    padding-top: 28px;
+    .options-trade-title {
+      font-size: 22px;
+    }
+    .buttonTimer {
+      display: inline-block;
+      margin-left: 20px
+      font-size: 14px;
+    }
+    .options-trade-form {
+      margin-top: 40px;
+      .leftInp, .rightInp {
+        width: 320px;
+        float: left;
+      }
+      .rightInp {
+        .input-line-content{
+          .common-button-slot{
+            color: var(--color-Icon);
+            font-weight: 400;
+            }
+          }
+        }
+      .tradeIcon {
+        height: 46px;
+        line-height: 60px;
+        text-align: center;
+        width: 60px;
+        float: left;
+        margin-top: 20px;
+      }
+      
+    }
+    .options-trade-pass {
+      width: 240px;
+      margin-top: 50px;
+    }
+    .options-trade-button{
+      .otcTrade-ImmediatePurchase.u-8-bg {
+        background-color: var(--color-Green);
+        .common-button-slot{
+          color: var(--color-BTN-BUY-SELL-text);
+        }
+      }
+      .otcTrade-ImmediateSell.u-8-bg {
+        background-color: var(--color-Negative);
+        .common-button-slot{
+          color: var(--color-BTN-BUY-SELL-text);
+        }
+      }
+     .common-button.common-button-solid-disabled {
+       .common-button-slot{
+        color: var(--color-BTN-disabled-text);
+         }
+     }
+    }
+  }
+  .otcTrade-options-myself {
+    padding-top: 42px;
+    padding-left: 60px;
+    .myself-tip {
+      font-size: 14px;
+      margin-top: 38px;
+    }
+    .textButton {
+      font-size: 14px;
+    }
+  }
+  .otc-page-title {
+    display: none;
+  }
+}
+// 国家版
+.Int {
+  .page-otcTrade-content {
+    height: calc(100% - 85px);
+    width: auto;
+  }
+  .page-otcTrade {
+    margin: 0;
+    width: auto;
+    height: 100%;
+    padding-bottom: 0;
+    .otcTrade-header,
+    .otcTrade-message,
+    .otcTrade-options-trade,
+    .otcTrade-options-myself {
+      padding-left: 0;
+    }
+    .page-otcTrade-bar {
+      width: 940px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    .otc-page-title  {
+      height: 70px;
+      line-height: 70px;
+      // margin-bottom: 5px;
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      display: block;
+      .page-title-bar {
+        width: 940px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+    }
+  }
+}

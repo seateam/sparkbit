@@ -1,0 +1,111 @@
+.trade-content {
+    position: relative;
+    //padding: 5px;
+    overflow: hidden;
+    min-width: 1280px;
+  }
+  .left-block {
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+  .lever-main-block {
+    height: 960px;
+    // 原
+    // padding 0 650px 0 305px
+    // 改，2022.09.24
+    padding 0 975px 0 0px
+  }
+  .right-block {
+    //position: absolute;
+    position static
+    top: 5px;
+    right: 5px;
+    // 原
+    // width 645px
+    // 改，2022.09.24
+    width 320px
+    overflow: hidden;
+
+  }
+
+  // 改，2022.09.24，新增
+  .right-block-new {
+    position absolute
+    width 645px
+    top 5px
+    right 330px
+    overflow hidden
+  }
+
+  // 小屏幕
+  .trade-content {
+    .left-expand {
+      .lever-main-block {
+        // 改，2022.09.24，注释
+      // padding-left 305px
+      }
+    }
+    .left-shrinks {
+      .left-block {
+        width: 100px;
+      }
+      .lever-main-block {
+        // 原
+      // padding-left 105px
+      // 改，2022.09.24
+      padding-left 0px
+      }
+    }
+  }
+  .trade-shrinks {
+    .lever-main-block {
+      // 原
+    // padding 0 325px 0 105px
+    // 改，2022.09.24
+    padding 0 650px 0 105px
+    }
+    .right-block {
+      width: 320px;
+    }
+
+    // 改，2022.09.24，新增
+  .right-block-new {
+    width 320px
+  }
+  }
+  .lever-transaction {
+    // 原
+    // height: 430px;
+    // margin-top: 5px;
+
+    // 改，2022.09.24
+    height: 815px
+  }
+  .chart-box {
+    position: relative;
+  }
+// 国际版 样式
+.Int-trade {
+  .trade-content {
+    padding: 0 5px 0 0;
+    .left-block {
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    .right-block {
+      top: 0;
+      height: 100%;
+    }
+    .lever-transaction {
+      height: 400px;
+    }
+    .lever-main-block {
+      height: auto;
+      min-height: 800px;
+    }
+  }
+}

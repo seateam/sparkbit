@@ -1,0 +1,175 @@
+.page-account {
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+    .btn {
+        cursor: pointer;
+        user-select: none;
+    }
+    .page-account {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    // ******************
+    .m-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 120px;
+        box-sizing: border-box;
+        padding:0 44px;
+        background: var(--color-BG);
+    }
+    .m-head > .title {
+        font-weight: 600;
+        font-size: 32px;
+        color: var(--color-1);
+    }
+    .m-btnGroup {
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+    }
+    .m-btnGroup > .btn {
+        height: 40px;
+        color: var(--color-BTN-text-secondary-revert);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        padding: 0 20px;
+        border-radius: 100px;
+        border: 1px solid var(--color-BTN-secondary-border);
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+    }
+    .m-btnGroup > .btn > .txt {
+        white-space: nowrap;
+    }
+    .m-btnGroup > .btn.active {
+        color: #000000;
+        background: #DFEDFD;
+        border: 1px solid #000000;
+    }
+    .m-btnGroup > .btn:not(:last-child) {
+        margin-right: 12px;
+    }
+    .m-btnGroup > .btn.deposit {
+        background: var(--color-BTN-primary);
+        border-radius: 100px;
+        border-color: transparent;
+        font-weight: 600;
+        // font-size: 14px;
+        color: #FFFFFF;
+    }
+    .m-account2 {
+        // height: 149px;
+        // padding: 20px 48px 30px 36px;
+        padding: 24px;
+        margin: 0 44px;
+        box-sizing: border-box;
+        border-radius: 16px;
+        border: 1px solid var(--color-Toggle);
+        background: var(--color-BG-Light);
+    }
+    .m-account2 > .title {
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--color-19);
+    }
+    .m-account2 > .priceWrap {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 7px;
+        color: var(--color-1);
+    }
+    .m-account2 > .priceWrap > .price{
+        font-weight: 700;
+        font-size: 32px;
+    }
+    .m-account2 > .priceWrap > .price2 {
+        font-size: 14px;
+        margin-left : 4px;
+    }
+    .m-info {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 24px;
+    }
+    .m-info > .txt {
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        font-size: 14px;
+        color: var(--color-19);
+    }
+    .m-info:first-child {
+        margin-right: 48px;
+    }
+    .m-info > .num {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: var(--color-1);
+        margin-left: 8px;
+    }
+    .m-body {
+        width: 100%;
+        min-width: 1130px;
+        min-height: 536px;
+    }
+
+    .m-tableBox {
+        margin-top: 24px;
+        margin-left: 44px;
+        margin-right: 44px;
+        border-radius: 16px;
+        border: 1px solid var(--color-Toggle);
+        padding: 24px;
+    }
+
+    .m-tableHead {
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .m-tableHead .title{
+        font-style: normal;
+        padding: 4px 0px 20px 0px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        
+        color: var(--color-1);
+    }
+    .m-tableHead .left {
+        margin-bottom 20px
+    }
+    
+    .m-tableHead .checkbox {
+        margin-left: 20px;
+        
+    }
+    input[type="checkbox"] {
+      accent-color: var(--color-BTN-primary); 
+    }
+
+    .m-tableHead .hodetext {
+        margin-left: 4px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--color-text-primary);
+    }
+    .m-tableWrap {
+        box-sizing: border-box;
+        padding: 0 !important;
+    }
+}

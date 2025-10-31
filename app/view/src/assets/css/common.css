@@ -1,0 +1,37 @@
+body,
+body.a-7-bg {
+  background-color: var(--color-4);
+}
+#app.c-2-bg {
+  background-color: var(--color-4);
+}
+.common-select .select-options-box {
+  background: var(--color-BG-Light);
+  color: var(--color-text-primary);
+}
+.common-select .select-option-list .select-option-item {
+  /* margin: 0 12px; */
+}
+.common-select .select-option-list .select-option-item + .select-option-item {
+  margin-top: 2px;
+}
+.common-select .select-option-list .select-option-item.a-4-bg {
+  border-radius: 6px;
+  background: var(--color-Input-border);
+  color: var(--color-text-primary);
+}
+.b-1-cl {
+  color: var(--color-1) !important;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+[data-aos] {
+    pointer-events: auto;
+}

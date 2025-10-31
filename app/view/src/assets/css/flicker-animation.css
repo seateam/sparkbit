@@ -1,0 +1,25 @@
+.bgAnimation {
+    animation: bgColorAni 0.6s;
+}
+.bgAnimation2 {
+    animation: bgColorAni2 0.6s;
+}
+@keyframes bgColorAni {
+    from {
+        background-color:rgba(255, 255, 255, 0.9)
+    }
+    to {
+        background-color:rgba(255, 255, 255, 0.1)
+    }
+}
+@keyframes bgColorAni2 {
+    0% {
+        background-color: none;
+    }
+    10% {
+        background-color:rgba(175, 185, 202, .5)
+    }
+    to {
+        background-color: none;
+    }
+}

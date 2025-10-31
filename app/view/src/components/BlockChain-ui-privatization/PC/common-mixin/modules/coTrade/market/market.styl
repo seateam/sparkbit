@@ -1,0 +1,149 @@
+.co-market-box {
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+  .market-tab {
+    padding-inline: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-Toggle);
+    .category-select-box {
+      display: flex;
+      border-radius: 2px;
+      margin-block: 12px;
+      .tab {
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        .s {
+          display: none;
+        }
+        &:hover {
+          .h {
+            display: none;
+          }
+          .s {
+            display: block;
+          }
+        }
+        &.u-8-bg {
+          border-radius: 2px;
+        }
+      }
+    }
+    .search {
+      width: 130px;
+      .input-find-content {
+        width: 100%;
+        .iconbox{
+          float: right;
+        }
+        input {
+          width: 70px;
+          line-height: 28px;
+          height: 28px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  .co-market-symbol {
+    // 原
+    // font-size: 12px;
+    // 改，2022.09.29，新增
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 12px 20px 0;
+
+    .thead {
+      width: 100%;
+      height: 36px;
+      box-sizing: border-box;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .tbody {
+      height 280px;
+      box-sizing: border-box;
+      .tr {
+        //border-bottom-style: solid;
+        //border-bottom-width: 1px;
+        box-sizing: border-box;
+        display: flex;
+        height: 48px;
+        align-items: center;
+        position: relative;
+        &:hover {
+          .bg {
+            display block
+            position absolute
+            top 0
+            left 0
+            height 100%
+            width 100%
+          }
+        }
+      }
+    }
+    .thead,
+    .tbody {
+      span {
+        flex: 1;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        &.td-rose {
+          text-align: right;
+        }
+        &.td-symbol {
+          min-width 114px;
+        }
+      }
+    }
+    .tbody {
+      span.td-symbol {
+        color: var(--color-text-primary);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        span{
+          color: var(--color-text-secondary);
+        }
+      }
+    }
+  }
+  .sorte {
+    //width: 14px;
+    //height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

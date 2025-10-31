@@ -1,0 +1,180 @@
+.broker-system {
+  .user-management-child-header {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    padding: 18px 0 18px 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .broker-system-header {
+    margin-top: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    position: relative;
+    padding: 0 30px;
+
+    .update-time {
+      font-size: 12px;
+      float: right;
+      line-height: 56px;
+    }
+  }
+
+  .broker-user-info {
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    height: 185px;
+    padding: 0 30px;
+    position: relative;
+
+    .invite-help {
+      font-size: 14px;
+      cursor: pointer;
+      display: block;
+      margin-left: -10px;
+    }
+
+    .user-name {
+      display: inline-block;
+      letter-spacing: 0;
+      padding: 30px 48px 12px 0;
+      float: left;
+
+      .top {
+        font-size: 14px;
+        line-height: 12px;
+        height: 12px;
+        padding-left: 6px;
+        border-left-width: 2px;
+        border-left-style: solid;
+        margin-bottom: 12px;
+      }
+
+      .phone {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    .user-text-bar {
+      float: left;
+      padding-top: 30px;
+      width: 459px;
+    }
+
+    .user-text {
+      padding: 0 16px;
+      box-sizing: border-box;
+      width: 220px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      margin-left: 10px;
+      margin-bottom: 10px;
+
+      .title {
+        text-align: left;
+        font-size: 12px;
+      }
+
+      .info {
+        float: right;
+        font-size: 22px;
+      }
+    }
+
+    .invite-box {
+      padding: 0 10px;
+      display: flex;
+      line-height: 40px;
+      font-size: 12px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      .copy {
+        position: relative;
+        top: -2px;
+      }
+
+      .invite-right {
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .broker-system {
+    .broker-user-info {
+      height: 300px;
+
+      .user-name {
+        padding: 40px 0 12px 0;
+      }
+
+      .user-text-bar {
+        width: 100%;
+
+        .user-text {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .broker-content {
+      .overview-chars {
+        .overviewChars-content {
+          .overviewChars-content-left {
+            width: 100%;
+            float: none;
+
+            .overviewChars-content-messL {
+              float: none;
+            }
+
+            .overviewChars-content-messR {
+              float: none;
+              margin-top: 20px;
+            }
+          }
+
+          .overviewChars-content-right {
+            float: none;
+
+            .overviewChars-content-rightT {
+              text-align: left;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .broker-customer {
+        height: auto;
+
+        .broker-customer-content {
+          .broker-customer-sum {
+            float: none;
+          }
+
+          .broker-customer-mess {
+            float: none;
+            margin-left: 0px;
+            margin-top: 20px;
+          }
+
+          .broker-customer-sort {
+            float: none;
+            margin-left: 0;
+            padding-left: 0;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.trade-input.trade-input-china-container {
+    //height: 52px;
+    position: relative;
+    .input-item {
+      height: 38px;
+      border-width: 1px;
+      border-style: solid;
+      padding: 0 10px;
+      position: relative;
+      cursor: text;
+      display flex
+      align-items center
+      background: var(--color-Input-fill);
+      border-radius: 6px;
+      border-color: var(--color-Input-border);
+
+      // 改，2022.12.02，新增
+      .tit {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: var(--color-1);
+        //line-height: 34px;
+        //height: 30px;
+        // 改，2022.11.06，新增
+
+      }
+      .inputs {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        height: 18px;
+        // 改，2022.11.06，14 -> 18
+        //width: 90%;
+        flex auto
+        text-align right
+        color: var(--color-1);
+        padding-right 20px
+      }
+      .units {
+        //position: absolute;
+        //top: 17px;
+        //right: 15px;
+        // 改，2022.11.06，新增
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--color-1);
+      }
+    }
+    .input-item:hover {
+      border-color: var(--color-BTN-secondary-border);
+    }
+    .price-rate {
+      height: 24px;
+      line-height: 24px;
+      padding: 0 15px;
+    }
+    .disabledText {
+      font-size: 14px;
+    }
+    .error-msg {
+      border-radius: 2px;
+      line-height: 32px;
+      height: 30px;
+      position: absolute;
+      top: -44px;
+      left: 0;
+      right: 0;
+      padding: 0 20px;
+      em {
+        display: block;
+        border-width: 7px;
+        position: absolute;
+        bottom: -14px;
+        left: 15px;
+        border-style: solid dashed dashed;
+        border-color: #EB4D5C transparent transparent;
+        font-size: 0;
+        line-height: 0;
+      }
+    }
+    &.disabledForm {
+      .input-item {
+        border-style: solid;
+      }
+    }
+  }
+  .slide-fade-enter-active {
+    transition: all .5s;
+  }
+  .slide-fade-leave-active {
+    transition: all .5s;
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateY(-5px);
+    opacity: 0;
+  }

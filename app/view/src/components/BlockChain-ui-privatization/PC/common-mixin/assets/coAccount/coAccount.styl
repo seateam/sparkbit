@@ -1,0 +1,183 @@
+.page-coAccount {
+  .openClass{
+    text-align:center;
+    padding-top:250px;
+  }
+  .tableNownStyle {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px !important;
+    padding-left: 10px;
+    text-align: center;
+    padding-right: 10px;
+    vertical-align: middle;
+    border-radius: 100px !important;
+    border: 1px solid var(--color-BTN-secondary-border);
+    cursor: no-drop;
+  }
+  .tableTithDraw {
+    margin-left: 10px
+  }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .switchWrap {display: inline-block;}
+  .coAccount-header {
+    width: 100%;
+    height: 200px;
+    padding: 40px 30px 20px 30px;
+    box-sizing: border-box;
+    .options {
+      display: inline-block;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    .quota {
+      float: left;
+      .title {
+        font-size: 12px;
+      }
+      .number {
+        height: 32px;
+        font-size: 32px;
+        margin: 8px 0;
+      }
+      .Company {
+        font-size: 14px;
+        margin-left: 8px;
+      }
+      .Legal {
+        font-size: 12px;
+      }
+    }
+    .cohead-list {
+      float: left;
+      margin-left: 60px;
+      padding-left: 20px;
+      border-left-width: 1px;
+      border-left-style: solid;
+      li {
+        margin-top: 20px;
+        &:first-child {
+          margin: 0;
+        }
+      }
+      .key {
+        font-size: 12px;
+      }
+      .value {
+        font-size: 16px;
+        margin-top: 4px;
+      }
+    }
+  }
+  .exchangeAccount-body {
+    border-top-width: 10px;
+    border-top-style: solid;
+  }
+  .exchangeAccount-title {
+    height: 55px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 0 20px;
+    vertical-align: middle;
+    .text {
+      float: left;
+      font-size: 14px;
+      display: inline-block;
+      line-height: 55px;
+    }
+    .client {
+      float: right;
+      line-height: 55px;
+      font-size: 12px;
+      .client-icon {
+        vertical-align: middle;
+      }
+      .client-text {
+        vertical-align: middle;
+      }
+    }
+  }
+  .exchangeAccount-center {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    .table-head, .table-body-bar {
+      padding: 0!important;
+    }
+  }
+  .transfer-box {
+    padding-bottom: 40px;
+    .transfer-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 24px;
+      user-select: none;
+      li {
+        float: left;
+      }
+      .transfer-page {
+        flex: 1;
+        padding: 10px 16px;
+        height: 50px;
+        border-radius: 8px;
+        border: 1px solid var(--color-Input-border);
+        background: var(--color-Input-fill);
+        box-sizing: border-box;
+      }
+      .transfer-page-side {
+        color: var(--color-text-secondary);
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10px;
+        margin-bottom: 4px
+      }
+      .transfer-page-name {
+        color: var(--color-text-primary);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+      }
+      .transfer-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-inline: 8px;
+        border-radius: 100%;
+        cursor: pointer;
+        &:hover {
+          background: var(--color-Hover);
+        }
+      }
+    }
+  }
+  .coAccount-header-bg {
+      background-image: linear-gradient(-269deg, #0491ce 0%, #00aeb6 100%);
+    }
+  .coAccount-header {
+    background-position: right bottom !important;
+    background-repeat: no-repeat !important;
+  }
+}
+// 国际版
+.Int {
+  .coAccount-header {
+    padding: 40px 0 20px 0;
+  }
+  .coAccount-header,
+  .exchangeAccount-body {
+    width: 940px;
+    margin: 0 auto;
+  }
+  .exchangeAccount-title,
+  .exchangeAccount-center {
+    padding: 0;
+  }
+}

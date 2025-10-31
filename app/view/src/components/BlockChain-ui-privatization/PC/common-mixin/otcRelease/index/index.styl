@@ -1,0 +1,233 @@
+.page-otcRelease {
+  .noPay {
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .input-line-warning {
+    right: 0
+  }
+  //width: 1180px;
+  min-height: 800px;
+  padding-bottom: 80px;
+  //margin: 30px auto 0 auto;
+  // 头部选择币种
+  .otcRelease-symbolNav {
+    height: 55px;
+    margin-block: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: var(--color-Input-border);
+    box-sizing: border-box;
+  }
+  // 介绍
+  .otcRelease-message {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    box-sizing: border-box;
+    .otcRelease-message-title {
+      margin-bottom: 32px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    .otcRelease-message-text {
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 18px;
+      margin-bottom: 40px;
+    }
+  }
+  // 主体
+  .otcRelease-main {
+    padding-left: 60px;
+    box-sizing: border-box;
+    .otcRelease-page {
+      color: var(--color-text-primary);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    // 广告类型
+    .otcRelease-side {
+      display: flex;
+      height: 55px;
+      border-bottom: 1px solid var(--color-Toggle);
+      gap: 40px;
+      .common-redio {
+        vertical-align: middle;
+      }
+      .text {
+        display: inline-block;
+        color: var(--color-text-secondary);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 54px;
+        cursor: pointer;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-color: transparent;
+        box-sizing: border-box;
+      }
+      .otcRelease-side-even {
+        flex: 1;
+        text-align: center;
+      }
+      .otcRelease-side-even.active .text {
+        color: var(--color-text-primary);
+        border-color: var(--color-text-primary);
+      }
+    }
+    // 货币类型
+    .otcRelease-legalCurrency {
+      margin-top: 52px;
+      margin-bottom: 32px;
+    }
+    // 数量 95 -70 = 25
+    .otcRelease-number {
+      .input-line-warning {
+        right: 0
+      }
+    }
+    // input的单位
+    .otcRelease-input-page {
+      line-height: 30px;
+    }
+    // 当前单价 42 - 24 = 18
+    .otcRelease-NowPrice {
+      margin-top: 18px;
+      .otcRelease-NowPrice-side {
+        .des-icon{
+          position relative
+          margin-left 17px
+          span{
+            position absolute
+            box-shadow: 0 3px 4px 1px rgba(0,0,0,0.28);
+            border-radius: 2px;
+            padding 20px
+            left 26px
+            top: 0
+            display none
+            z-index 1
+          }
+          &:hover{
+            span{
+              display inline-table
+            }
+          }
+        }
+      }
+      .otcRelease-NowPrice-message {
+        font-size: 14px;
+        margin-top: 6px;
+        .address {
+          margin-left: 10px;
+        }
+      }
+    }
+    // 定价方式
+    .otcRelease-pricingMethod {
+      margin-top: 32px;
+    }
+    // 自定义价格
+    .otcRelease-autoPrice {
+      width: 380px;
+      margin-top: 30px;
+    }
+    // 总金额
+    .otcRelease-sum {
+      .otcRelease-sum-price {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .MessPrice{
+      margin-bottom 27px
+    }
+    // 最小限额
+    .otcRelease-minPrice {
+      margin-top: 32px;
+    }
+    .precentInput{
+      margin-top 32px
+      margin-bottom 12px
+    }
+    // 最大限额 90-70
+    .otcRelease-maxPrice,
+    .otcRelease-tradeTime,
+    .otcRelease-frequency,
+    .otcRelease-days {
+      margin-top: 32px;
+    }
+    //
+    .otcRelease-pays {
+      margin-top: 32px;
+      .otcRelease-paysList {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: flex;
+          align-items: center;
+          min-width: 140px;
+          margin-right: 40px;
+          margin-top: 30px;
+          user-select: none;
+        }
+        .common-checkout {
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        .paysList-text {
+          cursor: pointer;
+          display: inline-block;
+          min-width: 50px;
+          vertical-align: middle;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  // 成功后的弹窗
+  .success-dialog {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .otc-page-title {
+    display: none;
+  }
+}
+.Int {
+  .page-otcRelease {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    .page-otcRelease-coneent {
+      height: calc(100% - 85px);
+    }
+    .otcRelease-symbolNav,
+    .otcRelease-message,
+    .otcRelease-main {
+      padding-left: 0;
+    }
+    .page-otcRelease-bar {
+      width: 940px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+    .otc-page-title  {
+      height: 80px;
+      line-height: 80px;
+      // margin-bottom: 5px;
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      display: block;
+      .page-title-bar {
+        width: 940px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+    }
+  }
+}

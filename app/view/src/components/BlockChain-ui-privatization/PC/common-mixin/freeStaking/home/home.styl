@@ -1,0 +1,220 @@
+.free-staking {
+  .banner {
+    display: flex;
+    width 100%
+    background-position top center
+    background-repeat no-repeat
+    padding-top 1px
+
+    &.header {
+      //width: 1582px;
+      height: 336px;
+      margin-inline: auto;
+      box-sizing border-box
+      .banner-img img{
+        width: 476px;
+        height: 232px;
+      }
+    }
+
+    &.footer {
+      padding 60px 0px
+      //background-image linear-gradient(180deg, rgba(10, 19, 32, 1) 30%, rgba(15, 41, 67, 1))
+    }
+
+    .banner-cont {
+      width 1184px
+      margin 0 auto
+      position relative
+      min-height: 240px
+    }
+
+    .banner-logo {
+      position: absolute;
+      display block
+      width 380px
+      height 240px
+      top 50%
+      left 0
+      transform: translateY(-50%)
+    }
+
+    .rich-cont {
+      float right
+      width 680px
+      box-sizing border-box
+
+      .rich-title {
+        font-size 40px
+        line-height 56px
+        margin 0 0 13px 0
+        color rgba(237, 244, 248, 1)
+      }
+
+      .rich-text {
+        color rgba(130, 142, 161, 1)
+        font-size 14px
+        line-height 22px
+      }
+
+      .rich-line {
+        margin 15px 0px
+        width 31px
+        height 1px
+        background-color rgba(32, 47, 71, 1)
+      }
+
+      .rich-faq, .rich-eamil {
+        color rgba(130, 142, 161, 1)
+        font-size 12px
+        line-height 22px
+
+        a {
+          color rgba(36, 160, 245, 1)
+        }
+      }
+    }
+  }
+
+  .free-staking-cont {
+    padding: 28px 0 60px;
+    //width 1184px
+    width: 82.39vw;
+    margin-inline: auto;
+
+    .title {
+      .titlel {
+        font-size 16px
+        float left
+      }
+
+      .titler {
+        font-size 14px
+        float right
+        cursor pointer
+
+        span {
+          vertical-align middle
+        }
+
+        .icon {
+          vertical-align middle
+          margin-right 8px
+        }
+      }
+    }
+
+    .nav-tab {
+      //padding-top 12px
+      border-bottom 1px solid var(--color-Toggle)
+    }
+
+    .min-tab {
+      margin-top 30px
+
+      .min-tab-item {
+        cursor pointer
+        font-size 14px
+        float left
+        //min-width 70px
+        padding 0 12px
+        height 36px
+        line-height 36px
+        font-weight: 600;
+        text-align center
+        border-radius 100px
+        box-sizing border-box
+      }
+    }
+  }
+
+  .project-list {
+    padding-bottom 160px
+    width 100%
+    //margin-top 45px
+
+    .project-item {
+      display: flex;
+      align-items: center;
+      border-radius 12px
+      margin-top 20px
+      max-width 100%;
+      position relative;
+      //height 169px
+
+            .label-cont {
+              position absolute
+              top 0px
+              left 28px
+              width 150px
+
+              .label-type {
+                &.hot {
+                  background var(--color-Negative-20)
+                  color var(--color-Negative)
+                }
+                margin-right 12px
+                vertical-align top
+                text-align center
+                width 50px
+                height 22px
+                line-height 22px
+                border-radius 4px
+                font-size 12px
+                background var(--color-Positive-20)
+                color var(--color-Positive)
+                display inline-block
+              }
+            }
+      .project-iteml {
+        display: flex;
+        align-items: center;
+        //width 40px
+        //height 40px
+
+        .logo {
+          width 40px
+          height 40px
+          display block
+          float left
+        }
+
+    
+
+      }
+
+      .label-value {
+        font-size: 14px; 
+        line-height: 18px;
+        color: var(--color-text-secondary);
+        font-weight: 500;
+      }
+
+      .project-itemr {
+        .project-status {
+          float left
+          line-height 40px
+
+          .status-text {
+            font-size 12px
+            padding-right 17px
+            padding-left 6px
+          }
+        }
+
+        .nav-active {
+          float left
+
+          .nav-active-text {
+            font-size 14px
+          }
+        }
+      }
+    }
+  }
+
+  .no-data {
+    padding 200px 0px
+    text-align center
+  }
+}

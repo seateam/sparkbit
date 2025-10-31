@@ -1,0 +1,77 @@
+.page-flowingWater {
+    .m-title {
+        height: 118px;
+        line-height: 118px;
+        font-weight: 600;
+        font-size: 32px
+        color: var(--color-1);
+        box-sizing: border-box;
+        padding: 0 44px;
+    }
+    .m-tab {
+       display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #929292;
+  box-sizing: border-box;
+  padding-top: 20px;
+    }
+   .m-tab > .item {
+  margin-right: 32px;
+  position: relative;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.m-tab > .item:hover {
+  color: var(--color-text-primary);
+}
+.m-tab > .item.active {
+  color: var(--color-text-primary);
+}
+.m-tab > .item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(0, var(--color-1) 0%, var(--color-1) 100%) center bottom /
+    calc(100% - 14px) 100% no-repeat;
+}
+.m-tab > .item.active::after {
+  width: 100%;
+}
+
+    .m-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        margin: 0 44px;
+        border-bottom: 1px solid var(--color-Toggle);
+    }
+    .m-selectBox {
+        display: flex;
+        align-items: center;
+        margin: 12px 44px;
+    }
+    .m-selectBox.common-select:not(:last-child) {
+        margin-right: 20px;
+    }
+    .m-table {
+        min-height: 720px;
+        background: var(--color-BG);
+        width: auto;
+        margin: 28px 0 0;
+        box-sizing: border-box;
+        padding: 0 44px;
+    }
+}

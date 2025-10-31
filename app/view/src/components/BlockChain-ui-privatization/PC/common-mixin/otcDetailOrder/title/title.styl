@@ -1,0 +1,101 @@
+.otcDetailOrder-header {
+  .otcDetailOrder-bar {
+    padding-block: 28px;
+    display: flex;
+    align-items: center;
+    .bar-page {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        flex: auto;
+        max-width: min-content;
+        .bar-line {
+          display: none
+        }
+      }
+    }
+    .bar-line {
+      flex: 1;
+      display inline-block
+      border-top-style dotted
+      border-top-width 3px
+      border-color: var(--color-text-secondary);
+      vertical-align middle
+      margin-inline 12px
+    }
+    .bar-page-ball {
+      width 32px
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      border-radius: 100px;
+      color: var(--color-text-secondary);
+      background: var(--color-Toggle);
+      &.a-12-bg {
+        color: var(--color-BTN-primary-text);
+        background: var(--color-BTN-primary);
+      }
+    }
+    .bar-page-text {
+      color: var(--color-text-secondary);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      white-space: nowrap;
+      &.a-12-bg {
+        color: var(--color-text-primary);
+        background: transparent;
+      }
+    }
+  }
+  .otcDetailOrder-text {
+    margin-top: 0;
+    padding-block: 20px;
+    border-top: 1px solid var(--color-Input-border);
+    .Conspicuous:first-child {
+      margin-right: 8px;
+    }
+    .Conspicuous {
+      color: var(--color-text-primary);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      border-radius: 4px;
+      padding: 4px 8px;
+      background: var(--color-Input-fill);
+      &.completed {
+        background: var(--color-Positive-20);
+        color: var(--color-Positive);
+      }
+    }
+    .Conspicuous:not(:first-child):last-child {
+      color: var(--color-Icon);
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 20px;
+    }
+    .info {
+      margin-right: 4px;
+      font-size: 14px;
+    }
+    .info, .small, .active {
+      color: var(--color-text-primary);
+      font-weight: 400;
+      line-height: 18px;
+    }
+    .small, .active { 
+      font-size: 12px;
+    }
+    .active {
+      cursor: pointer;
+      margin-inline: 8px;
+    }
+  }
+}

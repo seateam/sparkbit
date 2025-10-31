@@ -1,0 +1,208 @@
+html {
+  --mainColor: #6a60ff;
+  --subColor: #5ceea0;
+  --subRedColor: #ff5f5f;
+  --bgColor: #181a1f;
+  --btnColor: #0c0e11;
+}
+.dark .light-show {
+  display: none;
+}
+.dark .dark-show {
+  display: inline-block;
+}
+.light .dark-show {
+  display: none;
+}
+.light .light-show {
+  display: inline-block;
+}
+.dark {
+  --color-1: rgba(255, 255, 255, 1);
+  --color-2: rgba(255, 255, 255, 0.6);
+  --color-3: rgba(24, 24, 24, 1);
+  --color-4: rgba(15, 15, 15, 1);
+  --color-5: rgba(255, 255, 255, 1);
+  --color-6: rgba(255, 255, 255, 1);
+  --color-7: rgba(135, 144, 159, 1);
+  --color-8: rgba(51, 51, 51, 1);
+  --color-9: rgba(146, 146, 146, 1);
+  --color-10: rgba(15, 15, 15, 1);
+  --color-11: rgba(31, 31, 31, 1);
+  --color-12: rgba(6, 4, 14, 1);
+  --color-13: rgba(170, 170, 170, 1);
+  --color-14: rgba(255, 255, 255, 0.08);
+  --color-15: rgba(24, 26, 31, 0.08);
+  --color-16: rgba(16, 88, 222, 0.21);
+  --color-17: rgba(16, 88, 222, 1);
+  --color-18: rgba(12, 14, 17, 1);
+  --color-19: rgba(255, 255, 255, 0.7);
+  --color-20: rgba(20, 22, 24, 1);
+  --color-21: rgba(34, 36, 41, 1);
+  --color-22: rgba(24, 26, 31, 1);
+  --color-23: rgba(31, 35, 40, 1);
+  --color-24: rgba(255, 255, 255, 0.12);
+  --color-25: rgba(34, 37, 44, 1);
+  --color-26: rgba(255, 255, 255, 0.08);
+  --color-27: rgba(255, 255, 255, 0.08);
+  --color-28: rgba(0, 0, 0, 1);
+  --color-29: rgba(47, 47, 47, 1);
+  --color-30: rgba(17, 18, 20, 0.5);
+  --color-31: rgba(24, 25, 28, 1);
+  --color-32: rgba(36, 36, 38, 1);
+  --color-33: rgba(255, 255, 255, 0.1);
+  --color-34: rgba(255, 255, 255, 0.6);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #999999;
+  --color-BG: #000000;
+  --color-BG-Light: #121212;
+  --color-BTN-primary: #6a60ff;
+  --color-BTN-primary-text: #ffffff;
+  --color-BTN-secondary-border: #666666;
+  --color-BTN-text-secondary-revert: #ffffff;
+  --color-BTN-BUY-SELL-text: #222222;
+  --color-BTN-disabled-bg: #1a1a1a;
+  --color-BTN-disabled-text: #666666;
+  --color-BTN-nutrual-bg: #ffffff;
+  --color-BTN-nutrual-text: #000000;
+  --color-Icon: #928bff;
+  --color-Header-active: #928bff;
+  --color-Positive: #5ceea0;
+  --color-Positive-50: #5ceea08c;
+  --color-Positive-20: #5ceea040;
+  --color-Negative: #ff5f5f;
+  --color-Negative-50: #ff5f5f8c;
+  --color-Negative-20: #ff5f5f40;
+  --color-Favorite: #ffc642;
+  --color-Divider: #1a1a1a;
+  --color-Toggle: #333333;
+  --color-Input-fill: #1a1a1a;
+  --color-Input-border: #333333;
+  --color-Modal-mask: #404040b3;
+  --color-input-fill-on-light-bg: #0d0d0d;
+  --color-tag-bg: #6a60ff40; /* #6a60ff with 25% opacity */
+  --color-BG-Light-Purple: #9992ff1a;
+  --color-header-border: #1a1a1a;
+  --color-qr-border: transparent;
+  --color-Hover: #ffffff14;
+  --color-Border: #ffffff99;
+  --color-Img-bg: #ffffff0a;
+  --color-Header-bg: #fffffff2;
+  --color-Hover-bg: #00000040;
+  --color-Green: #5ceea0;
+  --color-BTN-BUY-SELL-text: #222222;
+}
+.light {
+  --color-1: rgba(34, 34, 34, 1);
+  --color-2: rgba(40, 40, 40, 0.6);
+  --color-3: rgba(255, 255, 255, 1);
+  --color-4: rgba(250, 250, 250, 1);
+  --color-5: rgba(60, 60, 60, 1);
+  --color-6: rgba(104, 104, 104, 1);
+  --color-7: rgba(152, 152, 152, 1);
+  --color-8: rgba(40, 40, 40, 1);
+  --color-9: rgba(104, 104, 104, 1);
+  --color-10: rgba(255, 255, 255, 1);
+  --color-11: rgba(238, 238, 238, 1);
+  --color-12: rgba(238, 238, 238, 1);
+  --color-13: rgba(104, 104, 104, 1);
+  --color-14: rgba(40, 40, 40, 0.08);
+  --color-15: rgba(255, 255, 255, 1);
+  --color-16: rgba(238, 238, 238, 1);
+  --color-17: rgba(238, 238, 238, 1);
+  --color-18: rgba(238, 238, 238, 1);
+  --color-19: rgba(104, 104, 104, 1);
+  --color-20: rgba(238, 238, 238, 1);
+  --color-21: rgba(243, 243, 243, 1);
+  --color-22: rgba(255, 255, 255, 1);
+  --color-23: rgba(255, 255, 255, 1);
+  --color-24: rgba(40, 40, 40, 0.12);
+  --color-25: rgba(238, 238, 238, 1);
+  --color-26: rgba(241, 241, 241, 1);
+  --color-27: rgba(238, 238, 238, 1);
+  --color-28: rgba(255, 255, 255, 1);
+  --color-29: rgba(238, 238, 238, 1);
+  --color-30: rgba(255, 255, 255, 1);
+  --color-31: rgba(225, 225, 225, 1);
+  --color-32: rgba(225, 225, 225, 1);
+  --color-33: rgba(40, 40, 40, 0.1);
+  --color-34: rgba(180, 191, 214, 0.12);
+  --color-text-primary: #222222;
+  --color-text-secondary: #898989;
+  --color-BG: #ffffff;
+  --color-BG-Light: #f7f7f7;
+  --color-BTN-primary: #6a60ff;
+  --color-BTN-primary-text: #ffffff;
+  --color-BTN-secondary-border: #cccccc;
+  --color-BTN-text-secondary-revert: #222222;
+  --color-BTN-BUY-SELL-text: #ffffff;
+  --color-BTN-disabled-bg: #e5e5e5;
+  --color-BTN-disabled-text: #999999;
+  --color-BTN-nutrual-bg: #000000;
+  --color-BTN-nutrual-text: #ffffff;
+  --color-Icon: #6a60ff;
+  --color-Header-active: #928bff;
+  --color-Positive: #1dc96e;
+  --color-Positive-50: #1dc96e8c;
+  --color-Positive-20: #1dc96e40;
+  --color-Negative: #ff5f5f;
+  --color-Negative-50: #ff5f5f8c;
+  --color-Negative-20: #ff5f5f40;
+  --color-Favorite: #ffc642;
+  --color-Divider: #e5e5e5;
+  --color-Toggle: #e5e5e5;
+  --color-Input-fill: #f7f7f7;
+  --color-Input-border: #e5e5e5;
+  --color-Modal-mask: #bfbfbfb3;
+  --color-input-fill-on-light-bg: #f0f0f0;
+  --color-tag-bg: #6a60ff40;
+  --color-BG-Light-Purple: #6a60ff0f;
+  --color-header-border: #1a1a1a;
+  --color-qr-border: #cccccc;
+  --color-Hover: #0000000a;
+  --color-Border: #00000099;
+  --color-Img-bg: #0000000a;
+  --color-Header-bg: #000000f2;
+  --color-Hover-bg: #ffffff40;
+  --color-Green: #5ceea0;
+  --color-BTN-BUY-SELL-text: #222222;
+}
+.input-line-baseStance {
+  border: 1px solid var(--color-Input-border) !important;
+  border-radius: 8px;
+}
+.input-line-baseStance:hover {
+  border: 1px solid var(--color-BTN-secondary-border) !important;
+  border-radius: 8px;
+}
+.input-line-content .input-line-baseStance .input_line_inp .input,
+.login_input_class .input {
+  color: var(--color-text-primary) !important;
+}
+.common-select .input_line_inp,
+.area-line-content .input-line-baseStance .input_line_inp textarea {
+  color: var(--color-text-primary) !important;
+}
+.common-select .input_line_content {
+  border-radius: 8px;
+  background: var(--color-Input-fill) !important;
+  color: var(--color-text-primary);
+}
+#app {
+  background: var(--color-BG);
+}
+.__bar-is-vertical,
+.__bar-is-horizontal {
+  background: var(--color-29) !important;
+}
+.light input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: unset !important;
+}
+.u-1-cl {
+  color: var(--color-Positive) !important;
+}
+.u-4-cl {
+  color: var(--color-Negative) !important;
+}

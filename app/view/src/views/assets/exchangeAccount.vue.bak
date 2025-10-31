@@ -1,0 +1,494 @@
+<template>
+  <!-- 改，2022.12.07 整个页面修改样式 -->
+  <section class="page-exchangeAccount">
+    <div class="m-body">
+      <div class="m-topHead">
+        <div class="wrap flex">
+          <div class="m-account flex">
+            <span class="title">{{ $t("assets.index.exchangeAccount") }}</span>
+            <img
+              src="/static/img/new/hide.svg"
+              height="20"
+              style="margin-left: 12px; cursor: pointer"
+              @click="hideInfo = true"
+            />
+            <img
+              src="/static/img/new/see.svg"
+              height="24"
+              style="margin-left: 12px; cursor: pointer"
+              @click="hideInfo = false"
+            />
+          </div>
+          <div class="m-btnGroup flex">
+            <div class="btn">Buy  and  Sell  Coins</div>
+            <div class="btn">Deposit</div>
+            <div class="btn">Withdraw</div>
+            <div class="btn">Transfer</div>
+            <div class="btn">Internal  Transfer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    <div-->
+<!--      class="a-7-bd"-->
+<!--      style="-->
+<!--        display: flex;-->
+<!--        align-items: center;-->
+<!--        justify-content: space-between;-->
+<!--        padding: 28px 60px 12px 20px;-->
+<!--        min-height: 180px;-->
+<!--        width: 100%;-->
+<!--        box-sizing: border-box;-->
+<!--        position: relative;-->
+<!--      "-->
+<!--    >-->
+<!--      <div style="display: flex; flex-direction: column; align-items: flex-start">-->
+<!--        <div style="display: flex; justify-content: space-between; align-items: center">-->
+<!--          <span-->
+<!--            style="-->
+<!--              font-family: 'PingFang SC';-->
+<!--              font-style: normal;-->
+<!--              font-weight: 600;-->
+<!--              font-size: 20px;-->
+<!--              line-height: 28px;-->
+<!--              color: #00cc99;-->
+<!--            "-->
+<!--          >-->
+<!--            {{ $t("assets.index.exchangeAccount") }}-->
+<!--          </span>-->
+
+<!--          <div>-->
+<!--            <img-->
+<!--              src="/static/img/new/hide.svg"-->
+<!--              height="20"-->
+<!--              style="margin-left: 12px; cursor: pointer"-->
+<!--              @click="hideInfo = true"-->
+<!--            />-->
+<!--            <img-->
+<!--              src="/static/img/new/see.svg"-->
+<!--              height="24"-->
+<!--              style="margin-left: 12px; cursor: pointer"-->
+<!--              @click="hideInfo = false"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin-top: 24px">-->
+<!--          <span-->
+<!--            style="-->
+<!--              font-family: 'Poppins';-->
+<!--              font-style: normal;-->
+<!--              font-weight: 700;-->
+<!--              font-size: 28px;-->
+<!--              line-height: 60px;-->
+<!--              color: #b7dad8;-->
+<!--            "-->
+<!--          >-->
+<!--            &lt;!&ndash;测试效果&ndash;&gt;-->
+<!--            &lt;!&ndash; <vue-count-to :startVal='0' :endVal='10000' :duration='3000'></vue-count-to>&ndash;&gt;-->
+<!--            &lt;!&ndash; 改，2022.11.14， 增加数字滚动动画 原来的： {{ !hideInfo ? totalRate : "******" }}&ndash;&gt;-->
+<!--            <template v-if="!hideInfo">-->
+<!--              <template v-if="+calTotalRate > 0">-->
+<!--                {{ totalRate.charAt(0) }}-->
+<!--                <vue-count-to-->
+<!--                  :decimals="calDecimalLen(calTotalRate)"-->
+<!--                  :startVal="0"-->
+<!--                  :endVal="+calTotalRate"-->
+<!--                  :duration="3000"-->
+<!--                ></vue-count-to>-->
+<!--              </template>-->
+<!--              <span class="totalRateTxt" v-else>{{ totalRate }}</span>-->
+<!--            </template>-->
+<!--            <span v-else>******</span>-->
+<!--          </span>-->
+
+<!--          <span-->
+<!--            style="-->
+<!--              font-family: 'PingFang SC';-->
+<!--              font-style: normal;-->
+<!--              font-weight: 500;-->
+<!--              font-size: 18px;-->
+<!--              color: white;-->
+<!--            "-->
+<!--          >-->
+<!--            ≈-->
+<!--            &lt;!&ndash; 改，2022.11.14， 增加数字滚动动画 原来的： {{ !hideInfo ? totalBalance : "******" }}&ndash;&gt;-->
+<!--            <template v-if="!hideInfo">-->
+<!--              <vue-count-to-->
+<!--                :decimals="4"-->
+<!--                v-if="totalBalance > 0"-->
+<!--                :startVal="0"-->
+<!--                :endVal="+totalBalance"-->
+<!--                :duration="3000"-->
+<!--              ></vue-count-to>-->
+<!--              <span class="totalRateTxt" v-else>{{ totalBalance }}</span>-->
+<!--            </template>-->
+<!--            <span v-else>******</span>-->
+<!--            {{ showTotalBalanceSymbol }}-->
+<!--          </span>-->
+<!--        </div>-->
+
+<!--        <span-->
+<!--          style="-->
+<!--            font-family: 'PingFang SC';-->
+<!--            font-style: normal;-->
+<!--            font-weight: 400;-->
+<!--            font-size: 14px;-->
+<!--            line-height: 20px;-->
+<!--            color: #226afd;-->
+<!--            margin-top: 14px;-->
+<!--          "-->
+<!--        >-->
+<!--          {{ $t("assets.exchangeAccount.TotalAssets") }}-->
+<!--        </span>-->
+<!--      </div>-->
+<!--      <div-->
+<!--        class="canvasBox"-->
+<!--        style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)"-->
+<!--      >-->
+<!--        <div-->
+<!--          style="width: fit-content; display: flex; align-items: center"-->
+<!--          v-show="canvasPagesFilter && canvasPagesFilter.length != 0"-->
+<!--        >-->
+<!--          <ul class="colorList f-8-cl" style="margin-right: 32px">-->
+<!--            <li-->
+<!--              style="display: flex; align-items: center; padding: 6px 0px"-->
+<!--              v-for="(item, index) in canvasPagesFilter"-->
+<!--              :key="index"-->
+<!--            >-->
+<!--              <span-->
+<!--                style="width: 12px; height: 12px; margin-right: 6px"-->
+<!--                :style="`background: ${item.color}`"-->
+<!--              >-->
+<!--              </span>-->
+
+<!--              {{ item.symbol }}-->
+
+<!--              <span style="margin-left: 12px" :style="`color: ${item.color}`">-->
+<!--                &lt;!&ndash; 改，2022.11.14， 增加数字滚动动画 原来的： {{ item.amount }}&ndash;&gt;-->
+<!--                <template v-if="!hideInfo">-->
+<!--                  <vue-count-to-->
+<!--                    ref="amountCount"-->
+<!--                    :decimals="2"-->
+<!--                    v-if="+item.amount > 0"-->
+<!--                    :startVal="0"-->
+<!--                    :endVal="+item.amount"-->
+<!--                    :duration="3000"-->
+<!--                  ></vue-count-to>-->
+<!--                  <span class="totalRateTxt" v-else>{{ item.amount }}</span>-->
+<!--                </template>-->
+<!--                <span v-else>******</span>-->
+<!--              </span>-->
+<!--            </li>-->
+<!--          </ul>-->
+
+<!--          <canvas ref="canvas" width="100" height="100"></canvas>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div-->
+<!--        style="-->
+<!--          display: flex;-->
+<!--          flex-direction: column;-->
+<!--          justify-content: center;-->
+<!--          align-items: center;-->
+<!--          min-width: 286px;-->
+<!--          width: fit-content;-->
+<!--        "-->
+<!--      >-->
+<!--        <div-->
+<!--          style="display: flex; justify-content: space-between; align-items: center; width: 100%"-->
+<!--        >-->
+<!--          <button-->
+<!--            @click="gotoDeposit()"-->
+<!--            style="-->
+<!--              padding: 7px 13px;-->
+<!--              min-width: 85px;-->
+<!--              width: fit-content;-->
+<!--              height: 38px;-->
+<!--              background: rgba(163, 210, 208, 0.18);-->
+<!--              border: 2px solid #c4e3e2;-->
+<!--              border-radius: 5px;-->
+<!--              color: #06e775;-->
+<!--            "-->
+<!--          >-->
+<!--            {{ $t("assets.exchangeAccount.Recharge") }}-->
+<!--          </button>-->
+
+<!--          <button-->
+<!--            @click="gotoWithdraw()"-->
+<!--            style="-->
+<!--              padding: 7px 13px;-->
+<!--              min-width: 85px;-->
+<!--              width: fit-content;-->
+<!--              height: 38px;-->
+<!--              background: rgba(163, 210, 208, 0.18);-->
+<!--              border: 2px solid #c4e3e2;-->
+<!--              border-radius: 5px;-->
+<!--              color: #f7b7ba;-->
+<!--            "-->
+<!--          >-->
+<!--            {{ $t("assets.exchangeAccount.withdraw") }}-->
+<!--          </button>-->
+
+<!--          <button-->
+<!--            style="-->
+<!--              padding: 7px 13px;-->
+<!--              min-width: 85px;-->
+<!--              width: fit-content;-->
+<!--              height: 38px;-->
+<!--              background: rgba(163, 210, 208, 0.18);-->
+<!--              border: 2px solid #c4e3e2;-->
+<!--              border-radius: 5px;-->
+<!--              color: #00beff;-->
+<!--            "-->
+<!--          >-->
+<!--            {{ $t("assets.withdraw.transfer") }}-->
+<!--          </button>-->
+<!--        </div>-->
+
+<!--        <button-->
+<!--          @click="gotoTrade()"-->
+<!--          style="-->
+<!--            padding: 7px 13px;-->
+<!--            width: 100%;-->
+<!--            height: 38px;-->
+<!--            background: rgba(163, 210, 208, 0.18);-->
+<!--            border: 2px solid #c4e3e2;-->
+<!--            border-radius: 4px;-->
+<!--            color: #ffffff;-->
+<!--            margin-top: 20px;-->
+<!--          "-->
+<!--        >-->
+<!--          {{ $t("assets.index.flowingWater") }}-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; 改，2022.10.02，新增style &ndash;&gt;-->
+<!--    <div class="exchangeAccount-body a-7-bd h-1-bg">-->
+<!--      <div class="exchangeAccount-title a-3-bd">-->
+<!--        &lt;!&ndash; 资金列表 &ndash;&gt;-->
+<!--        <div class="text b-1-cl medium">-->
+<!--          {{ $t("assets.exchangeAccount.ListOfFunds") }}-->
+<!--        </div>-->
+<!--        <div class="hide">-->
+<!--          &lt;!&ndash; 隐藏零资产 &ndash;&gt;-->
+<!--          <c-switch :value="switchFlag" @click="switchChange" />-->
+<!--          <span class="hodetext">{{ $t("assets.hideMinAssets") }}</span>-->
+<!--        </div>-->
+<!--        <div class="find">-->
+<!--          &lt;!&ndash; 搜索币种 &ndash;&gt;-->
+<!--          <c-inputFind-->
+<!--            :promptText="$t('assets.exchangeAccount.SearchCurrency')"-->
+<!--            :value="findValue"-->
+<!--            @onchanges="findChanges"-->
+<!--            className="findClass"-->
+<!--          />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div-->
+<!--        class="exchangeAccount-center"-->
+<!--        :class="{-->
+<!--          'hide-smaill-account': switchFlag,-->
+<!--          'm-table': true-->
+<!--        }"-->
+<!--      >-->
+<!--        &lt;!&ndash; 改，2022.11.15 修改表格字体 12 => 18 &ndash;&gt;-->
+<!--        <c-table-->
+<!--          :loading="tabelLoading"-->
+<!--          :imgMap="imgMap"-->
+<!--          :colorMap="colorMap"-->
+<!--          :lineNumber="tabelLength"-->
+<!--          @elementClick="tableClick"-->
+<!--          :columns="columns"-->
+<!--          :dataList="tableData"-->
+<!--          class="exchangeAccount_table"-->
+<!--          bodyStyles="font-size: 14px;font-weight: bold;"-->
+<!--        />-->
+<!--      </div>-->
+<!--    </div>-->
+    <c-alert
+      :showFlag="isShowDialog"
+      :buttonText="$t('otcRelease.DeCertification')"
+      :imgMap="imgMap"
+      @close="dialogClose"
+      @confirm="gotoAuth"
+    >
+      <div class="ts-content-text">
+        {{ $t("personal.exccAuthForm.text19") }}
+      </div>
+    </c-alert>
+  </section>
+</template>
+
+<script>
+import mixin from "@/components/BlockChain-ui-privatization/PC/common-mixin/assets/exchangeAccount/exchangeAccount";
+import "@/components/BlockChain-ui-privatization/PC/common-mixin/assets/exchangeAccount/exchangeAccount.styl";
+import Button from "@/components/BlockChain-ui-privatization/PC/components/button/Button.vue";
+// 改，2022.11.14， 增加数字滚动动画组件
+import vueCountTo from "@/components/countTo/vue-countTo.vue";
+import Title from "@/views/otcDetailOrder/title";
+
+export default {
+  mixins: [mixin],
+  components: { Title, Button, vueCountTo },
+  data() {
+    return {
+      hideInfo: false,
+      dataListHide: [],
+      searchListResultHide: [],
+    };
+  },
+  computed: {
+    tableData() {
+      if (this.search) {
+        if (!this.hideInfo) {
+          return this.searchListResult;
+        } else {
+          return this.searchListResultHide;
+        }
+      } else {
+        if (!this.hideInfo) {
+          return this.dataList;
+        } else {
+          return this.dataListHide;
+        }
+      }
+    },
+    // 改，2022.11.14 计算小数点位数
+    calDecimalLen() {
+      return (num) => {
+        num = num + "";
+        return num.split(".")[1].length;
+      };
+    },
+  },
+  watch: {
+    dataList(data) {
+      if (data) {
+        let dataListHide_temp = [];
+
+        for (let item of data) {
+          let tempData = JSON.parse(JSON.stringify(item));
+          tempData["data"][1] = "******";
+          tempData["data"][2] = "******";
+          tempData["data"][3] = "******";
+          tempData["data"][4] = "******";
+
+          dataListHide_temp.push(tempData);
+        }
+
+        this.dataListHide = dataListHide_temp;
+      }
+    },
+    searchListResult(data) {
+      if (data) {
+        let dataListHide_temp = [];
+
+        for (let item of data) {
+          let tempData = JSON.parse(JSON.stringify(item));
+          tempData["data"][1] = "******";
+          tempData["data"][2] = "******";
+          tempData["data"][3] = "******";
+          tempData["data"][4] = "******";
+
+          dataListHide_temp.push(tempData);
+        }
+
+        this.searchListResultHide = dataListHide_temp;
+      }
+    },
+    // 改，2022-11-14 侦听显示与隐藏，重启动画
+    hideInfo(v) {
+      const refArr = this.$refs.amountCount;
+      if (!v && refArr && Array.isArray(refArr)) {
+        for (let i = 0; i < refArr.length; i++) {
+          refArr[i].start && refArr[i].start();
+        }
+      }
+    },
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    gotoDeposit() {
+      this.$router.push("/assets/recharge?symbol=USDT");
+    },
+    gotoWithdraw() {
+      // 改，2022.11.16 少了 "/"
+      this.$router.push("/assets/withdraw?symbol=USDT");
+    },
+    gotoTrade() {
+      this.$router.push("/assets/flowingWater");
+    },
+  },
+};
+</script>
+
+<style lang="stylus">
+.exchangeAccount_table {
+  .coinBox {
+    margin-left: 0px !important;
+    margin-right: 12px;
+  }
+  img {
+    // 改，2022.12.02，36px -> 24px
+    width: 24px;
+    height: 24px;
+  }
+}
+</style>
+<style scoped>
+.flex {
+  display: flex;
+  align-items: center;
+}
+.page-exchangeAccount {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.m-body {
+  width: 100%;
+  height: 1017px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.m-topHead {
+  width: 100%;
+  height: 284px;
+  background: #E5F2FA;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding-top: 34px;
+  padding-left: 112px;
+}
+.m-topHead > .wrap{
+  justify-content: space-between;
+}
+.m-account {}
+.m-account > .title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  color: #212122;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.m-btnGroup {
+  flex-wrap: nowrap;
+}
+.m-btnGroup > .btn {
+  height: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  line-height: 50px;
+  background: #DFEDFD;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+</style>

@@ -1,0 +1,103 @@
+.trade-box.trade-box-ex-container {
+    font-size: 12px;
+    padding: 0;
+    height 100%
+    .volume-trade-opt {
+      position: relative;
+      .volume-trade-opt-sell {
+        position: absolute;
+        right: 0;
+        top: 24%;
+      }
+    }
+    .title-block {
+      height: 36px;
+      line-height: 36px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      .tab {
+        display: inline-block;
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+        height: 38px;
+        cursor: pointer;
+        user-select: none;
+        margin-right: 20px;
+        font-size: 14px;
+        &.a-12-bd {
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+        }
+      }
+      .total-assets {
+        float: right;
+        height: 38px;
+      }
+    }
+    .trade-block {
+      // 改，2022.09.21，注释
+      // width: 50%;
+      // float: left;
+    }
+    .trade-form {
+      padding: 0 15px;
+      flex auto
+      .form-block {
+        padding: 0 15px;
+      }
+      .top-mag {
+        height: 35px;
+        line-height: 35px;
+        .lov {
+          float: right;
+          line-height: 35px;
+          .lovText {
+            vertical-align: middle;
+          }
+          .lovButton {
+            vertical-align: middle;
+            margin-right: 5px;
+          }
+        }
+      }
+      .percentage {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        margin: -19px -5px 0  -5px;
+        .per-item {
+          display: block;
+          width: 25%;
+          border-style: solid;
+          margin: 0 5px;
+          border-width: 1px;
+          text-align: center;
+          line-height: 24px;
+          height: 22px;
+          cursor: pointer;
+          user-select: none;
+          // 改，新增，2022.11.07
+          font-size: 16px;
+        }
+      }
+      .volume-trade {
+        height: 40px;
+        line-height: 42px;
+      }
+      .model-info {
+        padding-top: 35px;
+        .b-1-cl{
+          margin-top: 10px;
+          line-height: 24px;
+        }
+      }
+    }
+    .totalBalancesHide {
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+  .ts-content-text {
+    line-height: 24px;
+    height: 65px;
+  }

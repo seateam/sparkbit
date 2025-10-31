@@ -1,0 +1,131 @@
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh; 
+    padding: 120px 80px 0;
+    .banner-content {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        max-width: 1240px;
+        height: 85%; 
+        .left {
+            width: 40%;
+            .title {
+                width: 100%;
+                //color: var(--color-text-primary);
+                color: #ffffff;
+                font-size: 68px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 140%;
+                .logo {
+                    width: 88px;
+                    height: 82px;
+                    margin-bottom: -18px;
+                    margin-right: 20px;
+                }
+                &.long-lan {
+                    width: 120%;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            position: relative;
+            height: 85%; 
+            overflow: hidden;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 35%;
+                //background: linear-gradient(#0000 0%, var(--color-BG) 100%);
+                background: linear-gradient(#0000 0%, #000000 100%);
+                z-index: 2;
+            }
+            .video-wrap {
+                position: relative;
+                width: 360px;
+                height: 680px;
+                padding: 12px;
+                margin-right: 28px;
+                border: 1px solid var(--color-BTN-primary);
+                border-radius: 52px;
+                overflow: hidden;
+                box-sizing: border-box;
+                video {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 42px;
+                    display: block;
+                    object-fit: contain;
+                    background-color: rgba(0, 0, 0, 0);
+                    object-position: 50% top;
+                    box-sizing: border-box;
+                }
+            }
+            .data-info > div {
+                width: 324px;
+                padding: 24px 30px;
+                border-radius: 28px;
+                border: 1px solid var(--color-BTN-primary);
+                box-sizing: border-box;
+                overflow: hidden;
+                .name {
+                    //color: var(--color-text-primary);
+                    color: #ffffff;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 16px;
+                }
+            }
+            .volume {
+                margin-bottom: 28px;
+                .value {
+                    //color: var(--color-text-primary);
+                    color: #ffffff;
+                    font-size: 40px;
+                    font-weight: 900;
+                    line-height: normal;
+                }
+            }
+            .p-list {
+                height: 21.09vw;
+                .p-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 37px;
+                    //color: var(--color-text-primary);
+                    color: #ffffff;
+                    font-style: normal;
+                    line-height: normal;
+                    .p-coin {
+                        font-size: 18px;
+                        font-weight: 800;
+                    }
+                    .p-price {
+                        text-align: right;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    .td-rose {
+                        float: right;
+                        //color: var(--color-Positive);
+                        color: #5ceea0;
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+                .p-item+.p-item {
+                    margin-top: 1.25vw;
+                }
+            }
+        }
+    }
+}

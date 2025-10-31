@@ -1,0 +1,43 @@
+.depositMode-box {
+  //padding: 0;
+  .category-select-box {
+    width: 100%;
+    display: flex;
+    border-radius: 100px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-color: var(--color-Input-fill);
+    .tab {
+      flex: 1;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 100px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      &.active {
+        color: var(--color-BTN-primary-text);
+        background-color: var(--color-BTN-primary);
+      }
+    }
+  }
+  .text {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 0 44px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+}
+.depositModeDialog .dialog-frame {
+  width: 510px;
+  .dialog-frame-body {
+    width: 100%;
+    padding-inline: 28px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+}

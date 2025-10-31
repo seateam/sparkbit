@@ -1,0 +1,174 @@
+.page-leverafeToLoan {
+  .addressBox-page-icon {
+    line-height: 28px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .addressBox-page-market {
+        display: block;
+      }
+    }
+    .addressBox-page-market {
+      display: none;
+      position: absolute;
+      top: 28px;
+      width: 340px;
+      padding: 20px;
+      right: 0;
+      box-sizing: border-box;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 20px;
+      z-index: 4
+    }
+  }
+  .withdraw-header {
+    height: 55px;
+    line-height: 55px;
+  }
+  .goAddress {
+    font-size: 12px;
+    margin-left: 20px;
+    cursor: pointer
+  }
+  .withdraw-details {
+    margin: 28px 44px;
+    padding:28px 24px;
+    border:1px solid var(--color-Toggle);
+    border-radius: 16px;
+    .details-left {
+      float: left;
+      width: 45%;
+    }
+    .details-right {
+      float: right;
+      width: 45%;
+      // 57-44=13  28-13=15
+      margin-top: -15px
+    }
+    .coinType {
+      height: 25px;
+      margin-top: 15px;
+      .even {
+        float: left;
+        line-height: 25px;
+        margin-right: 28px;
+        .coin {
+          margin-left: 8px;
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+    }
+    .coinDeat {
+      margin-top: 6px;
+      li {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 12px;
+        margin-bottom: 2px;
+        box-sizing: border-box;
+
+        .key {
+          float: left;
+          font-size: 12px;
+        }
+        .value {
+          float: right;
+          margin-left: 10px;
+          font-size: 14px;
+        }
+        .tolanIcon {
+          margin-left: 6px;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          float: right;
+          .iconMark {
+            display: none;
+            position: absolute;
+            border-radius: 8px;
+            background: var(--color-BG-Light);
+            -webkit-box-shadow: 0 3px 4px 1px rgba(0,0,0,0.28);
+            box-shadow: 0 3px 4px 1px rgba(0,0,0,0.28);
+            bottom: 30px;
+            line-height: 22px;
+            left: -240px;
+            z-index: 3;
+            padding: 10px 24px;
+            font-size: 12px;
+            box-sizing: border-box;
+          }
+          &:hover {
+            .iconMark {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .symbol {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .numberList {
+      margin-top: 22px;
+      font-size: 12px;
+      ul {
+        float: left;
+      }
+      li {
+        margin-bottom: 4px
+      }
+      .numberList-key {
+        line-height: 27px;
+      }
+      .numberList-value {
+        line-height: 25px;
+        margin-left: 25px;
+        .text {
+          margin-right: 4px;
+          vertical-align: middle
+        }
+        .even-button {
+          vertical-align: middle
+        }
+      }
+      .numberList-last {
+        margin-left: 64px;
+      }
+    }
+    .ServiceSpk {
+      font-size: 12px;
+      line-height: 30px;
+      padding-right: 5px;
+    }
+    .details-warking {
+      margin-top: 37px;
+      font-size: 12px;
+    }
+  }
+  .withdraw-table {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    .table-head, .table-body-bar, .pagination{
+      padding: 0!important;
+    }
+  }
+}
+.Int {
+  .page-leverafeToLoan {
+    width: 940px;
+    margin: 0 auto;
+    .withdraw-table,
+    .withdraw-header {
+      padding: 0;
+    }
+    .withdraw-details {
+      padding-left: 0;
+      border: none;
+    }
+  }
+}

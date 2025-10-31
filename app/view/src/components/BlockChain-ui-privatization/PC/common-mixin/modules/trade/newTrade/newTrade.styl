@@ -1,0 +1,232 @@
+.trade-shrinks {
+  .newTrade-index-container {
+    .block-header {
+      //display none
+
+      span {
+        margin-right 28px
+        cursor pointer
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 44px;
+        color: var(--color-text-secondary);
+      }
+      span.actived,span:hover {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+}
+
+.newTrade-index-container {
+  &.newTrade {
+    width 320px
+    float right
+
+    // width 300px
+    // position absolute
+    // left 5px
+    // top 5px
+  }
+
+  .block-header {
+    height 44px
+    line-height 44px
+    padding 0 20px
+    font-size 14px
+    border-bottom-width 1px
+    border-bottom-style solid
+    border-color: var(--color-Input-fill);
+    //border none
+  }
+
+  .thead {
+    display: flex;
+    justify-content: space-between;
+    height 36px
+    line-height 36px
+    padding: 0 20px;
+    //border-bottom-width 1px
+    //border-bottom-style solid
+    font-size 12px
+    font-weight: 500;
+    color: var(--color-text-secondary);
+
+    span {
+      display inline-block
+      white-space nowrap
+    }
+  }
+
+  .tbody {
+    // padding 5px 0 5px
+    // 改，2022.09.25，12px -> 13px
+    font-size 12px
+    transiton height 0.5s ease
+    -webkit-transition height 0.5s ease
+
+    &.no-padding {
+      padding 0
+    }
+
+    .symbol-item {
+      //height: 20px;
+      //padding 0 15px 0 0
+      // 改，2022.09.25
+      cursor pointer
+      position relative
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+
+      .bg {
+        display none
+      }
+
+      &:hover {
+        .bg {
+          display block
+          position absolute
+          top 0
+          left 0
+          height 100%
+          width 100%
+        }
+      }
+
+      &.change-item {
+        .change {
+          position absolute
+          animation 2s opacityZ 0s 1
+          top 2px
+          left 0
+          height 80%
+          width 100%
+          opacity 0
+        }
+      }
+    }
+  }
+
+  @keyframes opacityZ {
+    0% {
+      opacity 1
+    }
+
+    100% {
+      opacity 0
+    }
+  }
+
+  @keyframes opacityZ {
+    0% {
+      opacity 1
+    }
+
+    100% {
+      opacity 0
+    }
+  }
+
+  @keyframes opacityZ {
+    0% {
+      opacity 1
+    }
+
+    100% {
+      opacity 0
+    }
+  }
+
+  .tbody.newTrade-tbody .__panel{
+    padding: 0;
+  }
+
+  .tbody.newTrade-tbody .__view{
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+
+  .thead, .tbody {
+    span {
+      display inline-block
+      text-align right
+      position relative
+
+      .icon {
+        display inline-block
+        vertical-align middle
+        height 15px
+        background #f00
+        float left
+        margin 8px 5px 0 0
+      }
+
+      .hover_show {
+        display none
+      }
+
+      &:hover {
+        .hover_show {
+          display block
+        }
+
+        .hover_hide {
+          display none
+        }
+      }
+
+      &.td-symbol, &.td-symbol0 {
+        text-align left
+        //padding-left 20px
+      }
+    }
+  }
+
+  .tr-bg {
+    position absolute
+    height 16px
+    top 0
+    right 0
+    z-index 1
+    opacity 0.16
+    padding 0
+    width 10%
+    transiton width 0.5s ease
+    -webkit-transition width 0.5s ease
+  }
+
+  .newTrade-tbody {
+    height 819px
+  }
+
+  &.lever-newTrade {
+    .newTrade-tbody {
+      height 745px
+    }
+  }
+}
+
+// 国际版
+.Int-trade {
+  .newTrade-index-container {
+    &.newTrade {
+      height 100%
+
+      .block-content {
+        height 100%
+      }
+
+      .newTrade-tbody {
+        height calc(100% - 35px)
+      }
+    }
+
+    &.lever-newTrade {
+      .block-content {
+        height calc(100% - 40px)
+      }
+    }
+  }
+}

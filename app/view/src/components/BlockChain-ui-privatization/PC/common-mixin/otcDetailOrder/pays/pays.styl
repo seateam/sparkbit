@@ -1,0 +1,94 @@
+.otcDetailOrder-pays {
+  min-height: 144px;
+  padding-block: 30px;
+  border-bottom: 1px solid var(--color-Input-border);
+  .otcDetailOrder-pays-title {
+    float: left
+    color: var(--color-text-secondary);
+    min-width: 160px;
+  }
+  .otcDetailOrder-pays-body {
+    margin-left: 20px;
+    float: left
+  }
+  .otcDetailOrder-pays-body:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .otcDetailOrder-pays-title, .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .text {
+    color: var(--color-text-primary);
+  }
+  .paysList {
+    li {
+      margin-bottom: 24px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .paysList-redio {
+      float: left;
+      margin-right: 12px;
+    }
+    .paysList-message {
+      float: left;
+      font-size: 14px;
+    }
+    .paysList-message-type {
+      color: var(--color-text-primary);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    .paysList-message-text, .paysList-message-bank {
+      max-width: 500px;
+      display: inline-block;
+      word-wrap: break-word;
+      line-height: 20px;
+    }
+    .paysList-message-text {
+      color: var(--color-text-secondary);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-right: 8px;
+    }
+    .paysList-message-ewm {
+      cursor: pointer;
+      vertical-align: middle;
+      position: relative;
+      svg {
+        margin-bottom: -2px;
+      }
+      &:hover {
+        .paysList-message-ewm-mark {
+          display: block;
+          z-index: 2;
+        }
+      }
+      .paysList-message-ewm-mark {
+        position: absolute;
+        left: 20px;
+        top: -53px;
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        border: 1px solid var(--color-BTN-secondary-border);
+        background: var(--color-text-primary);
+        padding: 12px;
+        box-sizing: border-box;
+        display: none;
+        img {
+          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

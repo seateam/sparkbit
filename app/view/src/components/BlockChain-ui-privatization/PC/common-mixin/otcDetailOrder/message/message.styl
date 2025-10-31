@@ -1,0 +1,62 @@
+.otcDetailOrder-message.otcDetailOrder-message-container {
+    padding-block: 20px;
+    border-block: 1px solid var(--color-Input-border);
+    .otcDetailOrder-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .otcDetailOrder-keys {
+      float: left;
+      li {
+        color: var(--color-text-secondary);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        padding-block: 9px;
+        min-width: 160px;
+      }
+    }
+    .otcDetailOrder-values {
+      float: left;
+      margin-left: 20px;
+      .identification-icon{
+        display: inline-block;
+        position: relative;
+        margin-left: 6px;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background: var(--BTN-primary, #6A60FF);
+        text-align: center;
+        svg {
+          position: relative;
+          top: 1px;
+        }
+        .identifi-icon-hover{
+          display none
+        }
+        .identifi-icon{
+          display inline-block
+        }
+        &:hover{
+          .identifi-icon{
+            display none
+          }
+          .identifi-icon-hover{
+            display inline-block
+          }
+        }
+      }
+      li {
+        max-width: 500px;
+        word-wrap: break-word;
+        color: var(--color-text-primary);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        padding-block: 9px;
+      }
+    }
+  }
