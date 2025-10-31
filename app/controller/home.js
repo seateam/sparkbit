@@ -7,6 +7,7 @@ const otherArr = {};
 
 class HomeController extends Controller {
   fsPublicInfo(mPath) {
+    //
     // 改，2022.08.14，加condole
     console.log("home.js", "mPath", mPath);
 
