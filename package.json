@@ -95,7 +95,7 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "serve": "npm run formatLocale && vue-cli-service serve",
-    "build": "npm run createWebWorkerMap && vue-cli-service build",
+    "build": "npm run createWebWorkerMap && NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "lint": "vue-cli-service lint",
     "formatLocale": "node ./app/view/src/components/BlockChain-ui-privatization/webpack-plugin/remove-webWorkerHash.js && node ./app/view/src/components/BlockChain-ui-privatization/webpack-plugin/format-locale.js",
     "createWebWorkerMap": "node ./app/view/src/components/BlockChain-ui-privatization/webpack-plugin/create-webWorker.js && node ./app/view/src/components/BlockChain-ui-privatization/webpack-plugin/format-locale.js"
@@ -109,8 +109,7 @@
   },
   "author": "",
   "license": "MIT",
-  "gitHooks": {
-  },
+  "gitHooks": {},
   "lint-staged": {
     "*.js": [
       "vue-cli-service lint",
